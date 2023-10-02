@@ -13,23 +13,24 @@ public class Day3 {
 	@BeforeMethod
 	public void OpenBrowser() {
 		System.setProperty("webdeiver.chrome.deriver", 
-				"C://Users//Rabindra//OneDrive//Desktop//chromedriver//chromedriver.exe");
-        WebDriver driver = new ChromeDriver();
-        driver.get("http://www.webdriveruniversity.com/");
+				"C:\\Users\\Rabindra\\OneDrive\\Desktop\\chromedriver1\\chromedriver.exe");
+        driver = new ChromeDriver();
+        driver.get("http://www.webdriveruniversity.com/index.html");
 	}
-	@Test(priority = 1 , description = "login functionality")
+	
+	@Test (priority = 1 , description = "login functionality")
 	public void testOne(){
-		String title = driver.getTitle();
+		String actualTitle = driver.getTitle();
 		String expectedTitle = "WebDriverUniversity.com";
 		
-		Assert.assertEquals(title, expectedTitle);
+		Assert.assertEquals(actualTitle, expectedTitle);
 		
 	}
 	
 	@Test(priority = 2 , description = "validate the home page url")
 	public void testTwo(){
-		String url = driver.getCurrentUrl();
-		boolean expected = url.contains("webdriveruniversity");
+		String currentUrl = driver.getCurrentUrl();
+		boolean expected = currentUrl.contains("webdriveruniversity");
 		Assert.assertEquals(expected, true);
 		
 	}
