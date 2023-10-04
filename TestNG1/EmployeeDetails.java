@@ -3,12 +3,8 @@ package TestNG1;
 public class EmployeeDetails {
 	private String name;
 	private double Salary;
-	private int age;
-	public void EmployeeDetails(String nm, double sl,int ag) {
-		this.name =   nm;
-		this.Salary = sl;
-		this.age   =  ag;				
-	}
+	private int age;	
+
 	public String getName() 
 	{
 		return name;
@@ -30,9 +26,6 @@ public class EmployeeDetails {
 	public void setAge(int ag) {
 		this.age = ag;
 	}
-	public double M_getSalary() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
+	
 
 }

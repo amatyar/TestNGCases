@@ -3,7 +3,7 @@ package TestNG1;
 public class EBLogic {
  public double YearlySalary(EmployeeDetails ed){
 	 double YearlySalary = 0;
-	 YearlySalary = ed.M_getSalary() * 12;
+	 YearlySalary = ed.getM_Salary() * 12;
 	return YearlySalary;
 	 
  }
