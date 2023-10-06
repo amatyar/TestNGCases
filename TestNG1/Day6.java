@@ -21,54 +21,52 @@ public class Day6 {
 		boolean avail =driver.getCurrentUrl().contains("inventory");
 		Assert.assertTrue(avail);
 		driver.close();
+		
 	}
+	@Parameters({"username","password"})
 
-	@Parameters({"username","password"})
 	@Test
-	public void TestCase2(String un , String pwd) {
-		System.out.println("Test case two");
 	
+	public void Testcase2(String un, String pwd) {
+		System.out.println("test case two");
 		driver = new ChromeDriver();
 		driver.get("https://www.saucedemo.com");
 		driver.findElement(By.id("user-name")).sendKeys(un);
 		driver.findElement(By.id("password")).sendKeys(pwd);
 		driver.findElement(By.id("login-button")).click();
-		boolean avail = driver.getCurrentUrl().contains("inventory");
+		boolean avail =driver.getCurrentUrl().contains("inventory");
 		Assert.assertTrue(avail);
 		driver.close();
+		
 	}
-
-	
 	@Parameters({"username","password"})
+	
 	@Test
-	public void TestCase3(String un , String pwd) {
-		System.out.println("Test case two");
-		System.setProperty("webdeiver.chrome.deriver", 
-				"C:\\Users\\Rabindra\\OneDrive\\Desktop\\chromedriver1\\chromedriver.exe");
+	public void Testcase3(String un, String pwd) {
+		System.out.println("test case three");
 		driver = new ChromeDriver();
 		driver.get("https://www.saucedemo.com");
 		driver.findElement(By.id("user-name")).sendKeys(un);
 		driver.findElement(By.id("password")).sendKeys(pwd);
 		driver.findElement(By.id("login-button")).click();
-		boolean avail = driver.getCurrentUrl().contains("inventory");
+		boolean avail =driver.getCurrentUrl().contains("inventory");
 		Assert.assertTrue(avail);
 		driver.close();
+		
 	}
-	
 	@Parameters({"username","password"})
 	@Test
-	public void TestCase4(String un , String pwd) {
-		System.out.println("Test case two");
-		System.setProperty("webdeiver.chrome.deriver", 
-				"C:\\Users\\Rabindra\\OneDrive\\Desktop\\chromedriver1\\chromedriver.exe");
+	public void Testcase4(String un, String pwd) {
+		System.out.println("test case four");
 		driver = new ChromeDriver();
 		driver.get("https://www.saucedemo.com");
 		driver.findElement(By.id("user-name")).sendKeys(un);
 		driver.findElement(By.id("password")).sendKeys(pwd);
 		driver.findElement(By.id("login-button")).click();
-		boolean avail = driver.getCurrentUrl().contains("inventory");
+		boolean avail =driver.getCurrentUrl().contains("inventory");
 		Assert.assertTrue(avail);
 		driver.close();
+		
 	}
 
 	
