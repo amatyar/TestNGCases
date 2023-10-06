@@ -1,11 +1,13 @@
 package TestNG1;
 
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
+
+
 
 public class Day3 {
 	WebDriver driver;
@@ -23,7 +25,7 @@ public class Day3 {
 		String actualTitle = driver.getTitle();
 		String expectedTitle = "WebDriverUniversity.com";
 		
-		Assert.assertEquals(actualTitle, expectedTitle);
+		AssertJUnit.assertEquals(actualTitle, expectedTitle);
 		
 	}
 	
@@ -31,7 +33,7 @@ public class Day3 {
 	public void testTwo(){
 		String currentUrl = driver.getCurrentUrl();
 		boolean expected = currentUrl.contains("webdriveruniversity");
-		Assert.assertEquals(expected, true);
+		AssertJUnit.assertEquals(expected, true);
 		
 	}
 	

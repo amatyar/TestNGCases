@@ -9,7 +9,11 @@ import org.testng.annotations.Test;
 
 public class Day5aa {
 WebDriver driver;
-	
+/*
+ * Data-driven testing is a test automation technique in which the test data and the test logic are kept separated. 
+ * The test data drives the testing by getting iteratively loaded to the test script. Hence, instead of having hard-coded 
+ * input, we have new data each time the script loads the data from the test data source.
+ */
 	@DataProvider(name = "loginData")
 	public Object[][]  provideLoginData(){
 		return new Object [][] {
