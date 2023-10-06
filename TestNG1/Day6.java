@@ -11,26 +11,23 @@ public class Day6 {
 	WebDriver driver;
 	@Parameters({"username","password"})
 	@Test
-	public void TestCase1(String un , String pwd) {
-		System.out.println("Test case one");
-		System.setProperty("webdeiver.chrome.deriver", 
-				"C:\\Users\\Rabindra\\OneDrive\\Desktop\\chromedriver1\\chromedriver.exe");
+	public void Testcase1(String un, String pwd) {
+		System.out.println("test case one");
 		driver = new ChromeDriver();
 		driver.get("https://www.saucedemo.com");
 		driver.findElement(By.id("user-name")).sendKeys(un);
 		driver.findElement(By.id("password")).sendKeys(pwd);
 		driver.findElement(By.id("login-button")).click();
-		boolean avail = driver.getCurrentUrl().contains("inventory");
+		boolean avail =driver.getCurrentUrl().contains("inventory");
 		Assert.assertTrue(avail);
-		driver.close();	
+		driver.close();
 	}
 
 	@Parameters({"username","password"})
 	@Test
 	public void TestCase2(String un , String pwd) {
 		System.out.println("Test case two");
-		System.setProperty("webdeiver.chrome.deriver", 
-				"C:\\Users\\Rabindra\\OneDrive\\Desktop\\chromedriver1\\chromedriver.exe");
+	
 		driver = new ChromeDriver();
 		driver.get("https://www.saucedemo.com");
 		driver.findElement(By.id("user-name")).sendKeys(un);
