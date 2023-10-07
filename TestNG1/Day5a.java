@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
 public class Day5a {
-	String url = "http://www.webdriveruniversity.com/";
+	
 	
 	String path ="C:\\Users\\Rabindra\\OneDrive\\Desktop\\chromedriver1\\chromedriver.exe";
 	WebDriver driver;
@@ -20,16 +20,21 @@ public class Day5a {
 	@BeforeMethod
 	public void BeforeMethod() {
 		System.setProperty("WebDriver.chrome.driver", path);
-		driver = new ChromeDriver();		
+		driver = new ChromeDriver();
+		driver.get("http://www.webdriveruniversity.com/");
 		driver.manage().window().maximize();
 	}
 	
 	@Test
 	public void TestOne() {
+		//Assert Hard
+		driver = new ChromeDriver();
+		driver.get("http://www.webdriveruniversity.com/");
+		//SoftAssert assertVar = new SoftAssert();
 		
-		driver.get(url);
 		String actualtitle = driver.getTitle();
 		Assert.assertEquals(actualtitle, "WebDriverUniversity.com");
+		
 		// verify url
 		boolean avail = driver.getCurrentUrl().contains("more");
 		Assert.assertTrue(avail);
@@ -42,10 +47,11 @@ public class Day5a {
 	@Test
 	public void  testCaseTwo() {
 		// Soft assertion		
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Rabindra\\OneDrive\\Desktop\\chromedriver1\\chromedriver.exe");
+		//System.setProperty("webdriver.chrome.driver", "C:\\Users\\Rabindra\\OneDrive\\Desktop\\chromedriver1\\chromedriver.exe");
 		driver = new ChromeDriver();
-		driver.get(url);
-		//driver.get("http://www.webdriveruniversity.com");
+	
+		driver.get("http://www.webdriveruniversity.com");
+		
 		SoftAssert  ss  = new SoftAssert ();
 		// verify title 
 		String actualtitle = driver.getTitle();
