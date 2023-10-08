@@ -3,7 +3,7 @@ package TestNG1;
 import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
 
-@Ignore
+//@Ignore
 public class Days8d {
 	
 	@Test(priority = 1)
