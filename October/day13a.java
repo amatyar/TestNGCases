@@ -10,7 +10,7 @@ public class day13a {
 		Assert.assertEquals(true, true);
 	}
 	
-	@Test(dependsOnMethods = "Ltogin")
+	@Test(dependsOnMethods = "Login")
 	public void search(){
 		System.out.println("Executing the search testcase");
 		Assert.assertEquals(false, true);
