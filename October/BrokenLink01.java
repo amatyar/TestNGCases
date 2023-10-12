@@ -41,20 +41,19 @@ public void testcase()
 		
 			String url = link.getAttribute("href");
 		
-			verifyLink(url);
+			verifyLinks(url);
 		}
 	
 	}
 
 
-	public static void verifyLink(String url) {
+	public static void verifyLinks(String url) {
 	try 
 	{
 		URL link = new URL(url);
 		HttpURLConnection httpURLConnection = (HttpURLConnection) link.openConnection();
 		httpURLConnection.setConnectTimeout(3000); // Set connection timeout to 3 seconds
 		httpURLConnection.connect();
-	
 	
 		if (httpURLConnection.getResponseCode() == 200) {
 		System.out.println(url + " - " + httpURLConnection.getResponseMessage());
